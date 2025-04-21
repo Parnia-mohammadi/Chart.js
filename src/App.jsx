@@ -15,6 +15,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import ScatterChart from "./components/scatter.chart/ScatterChart";
 
 ChartJS.register(
   CategoryScale,
@@ -36,6 +37,7 @@ function App() {
       <LineChart />
       <PieChart />
       <DoughnutChart />
+      <ScatterChart />
     </div>
   );
 }
