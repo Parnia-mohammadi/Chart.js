@@ -1,22 +1,4 @@
 import { Bar } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
 
 function BarChart() {
   const data = {
@@ -36,6 +18,7 @@ function BarChart() {
       tooltip: { enabled: true }, // نمایش توضیحات در هاور
     },
   };
+
   return (
     <div>
       <h2>Bar chart</h2>
