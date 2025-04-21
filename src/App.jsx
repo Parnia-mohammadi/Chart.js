@@ -1,5 +1,6 @@
 import "./App.css";
 import BarChart from "./components/bar.chart/BarChart";
+import DoughnutChart from "./components/doughnut.chart/DoughnutChart";
 import LineChart from "./components/line.chart/LineChart";
 import PieChart from "./components/pie.chart/PieChart";
 import {
@@ -34,6 +35,7 @@ function App() {
       <BarChart />
       <LineChart />
       <PieChart />
+      <DoughnutChart />
     </div>
   );
 }
