@@ -3,6 +3,8 @@ import BarChart from "./components/bar.chart/BarChart";
 import DoughnutChart from "./components/doughnut.chart/DoughnutChart";
 import LineChart from "./components/line.chart/LineChart";
 import PieChart from "./components/pie.chart/PieChart";
+import ScatterChart from "./components/scatter.chart/ScatterChart";
+import RadarChart from "./components/radar.chart/RadarChart";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -14,8 +16,8 @@ import {
   RadialLinearScale,
   Tooltip,
   Legend,
+  Filler,
 } from "chart.js";
-import ScatterChart from "./components/scatter.chart/ScatterChart";
 
 ChartJS.register(
   CategoryScale,
@@ -25,6 +27,7 @@ ChartJS.register(
   ArcElement,
   PointElement,
   RadialLinearScale,
+  Filler,
   Tooltip,
   Legend
 );
@@ -38,6 +41,7 @@ function App() {
       <PieChart />
       <DoughnutChart />
       <ScatterChart />
+      <RadarChart />
     </div>
   );
 }
