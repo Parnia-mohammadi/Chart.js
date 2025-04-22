@@ -8,7 +8,7 @@ function ZustandProfile() {
       <h2>ZustandProfile</h2>
       <div
         style={{
-          border: theme === "ligth" ? "1px solid black" : "1px solid white",
+          border: theme === "light" ? "1px solid black" : "1px solid white",
           borderRadius: "8px",
           display: "flex",
           flexDirection: "column",
@@ -20,7 +20,7 @@ function ZustandProfile() {
       </div>
       <form
         style={{
-          border: theme === "ligth" ? "1px solid black" : "1px solid white",
+          border: theme === "light" ? "1px solid black" : "1px solid white",
           borderRadius: "8px",
           padding: "1rem",
           display: "flex",

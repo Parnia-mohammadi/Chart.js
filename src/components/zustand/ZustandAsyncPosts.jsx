@@ -27,7 +27,7 @@ function ZustandAsyncPosts() {
               key={post.id}
               style={{
                 border:
-                  theme === "ligth" ? "1px solid black" : "1px solid white",
+                  theme === "light" ? "1px solid black" : "1px solid white",
                 padding: "10px",
                 margin: "5px",
                 maxWidth: "30%",
