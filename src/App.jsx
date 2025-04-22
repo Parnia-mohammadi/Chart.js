@@ -18,6 +18,7 @@ import {
   Legend,
   Filler,
 } from "chart.js";
+import ZustandButton from "./components/zustandButton/ZustandButton";
 
 ChartJS.register(
   CategoryScale,
@@ -36,6 +37,7 @@ function App() {
   return (
     <div>
       <h1>Charts</h1>
+      <ZustandButton />
       <BarChart />
       <LineChart />
       <PieChart />
