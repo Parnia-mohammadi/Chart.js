@@ -12,7 +12,6 @@ function BarChart() {
     ],
   };
   const options = {
-    responsive: true, // نمودار واکنش‌گرا باشه
     plugins: {
       legend: { position: "bottom" }, // موقعیت عنوان
       tooltip: { enabled: true }, // نمایش توضیحات در هاور

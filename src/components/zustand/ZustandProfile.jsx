@@ -1,14 +1,14 @@
-import useCounterStore from "../../store/store";
+import useAppStore from "../../store/store";
 
 function ZustandProfile() {
-  const { user, setUser } = useCounterStore();
+  const { user, setUser, theme } = useAppStore();
 
   return (
     <div>
       <h2>ZustandProfile</h2>
       <div
         style={{
-          border: "1px solid black",
+          border: theme === "ligth" ? "1px solid black" : "1px solid white",
           borderRadius: "8px",
           display: "flex",
           flexDirection: "column",
@@ -20,10 +20,11 @@ function ZustandProfile() {
       </div>
       <form
         style={{
-          border: "1px solid black",
+          border: theme === "ligth" ? "1px solid black" : "1px solid white",
           borderRadius: "8px",
           padding: "1rem",
           display: "flex",
+          justifyContent: "center",
           gap: "1rem",
         }}
       >

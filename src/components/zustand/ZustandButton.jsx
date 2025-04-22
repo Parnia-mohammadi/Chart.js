@@ -1,13 +1,13 @@
-import useCounterStore from "../../store/store";
+import useAppStore from "../../store/store";
 
 function ZustandButton() {
-  const { count, increase, decrease } = useCounterStore();
+  const { count, increase, decrease, theme } = useAppStore();
   return (
     <div>
       <h2>ZustandButton</h2>
       <div
         style={{
-          border: "1px solid black",
+          border: theme === "ligth" ? "1px solid black" : "1px solid white",
           display: "flex",
           justifyContent: "center",
           gap: "1rem",

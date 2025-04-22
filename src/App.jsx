@@ -20,7 +20,8 @@ import {
 } from "chart.js";
 import ZustandButton from "./components/zustand/ZustandButton";
 import ZustandProfile from "./components/zustand/ZustandProfile";
-import useCounterStore from "./store/store";
+import useAppStore from "./store/store";
+import ZustandAsyncPosts from "./components/zustand/ZustandAsyncPosts";
 
 ChartJS.register(
   CategoryScale,
@@ -36,7 +37,7 @@ ChartJS.register(
 );
 
 function App() {
-  const { theme, toggleTheme } = useCounterStore();
+  const { theme, toggleTheme } = useAppStore();
   return (
     <div
       className="card"
@@ -57,12 +58,16 @@ function App() {
       </div>
       <ZustandProfile />
       <ZustandButton />
-      <BarChart />
-      <LineChart />
-      <PieChart />
-      <DoughnutChart />
-      <ScatterChart />
-      <RadarChart />
+      <ZustandAsyncPosts />
+      <h2>Charts: </h2>
+      <div className="charts">
+        <BarChart />
+        <LineChart />
+        <PieChart />
+        <DoughnutChart />
+        <ScatterChart />
+        <RadarChart />
+      </div>
     </div>
   );
 }
