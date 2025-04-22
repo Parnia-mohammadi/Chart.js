@@ -7,6 +7,9 @@ const useCounterStore = create((set) => ({
   user: { name: "", email: "" },
   setUser: (updatedUser) =>
     set((state) => ({ user: { ...state.user, ...updatedUser } })),
+  theme: "light",
+  toggleTheme: () =>
+    set((state) => ({ theme: state.theme === "light" ? "dark" : "light" })),
 }));
 
 export default useCounterStore;

@@ -20,6 +20,7 @@ import {
 } from "chart.js";
 import ZustandButton from "./components/zustand/ZustandButton";
 import ZustandProfile from "./components/zustand/ZustandProfile";
+import useCounterStore from "./store/store";
 
 ChartJS.register(
   CategoryScale,
@@ -35,9 +36,25 @@ ChartJS.register(
 );
 
 function App() {
+  const { theme, toggleTheme } = useCounterStore();
   return (
-    <div>
-      <h1>Charts</h1>
+    <div
+      className="card"
+      style={{
+        backgroundColor: theme === "light" ? "whitesmoke" : "black",
+        color: theme === "light" ? "black" : "white",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <h1>Charts</h1>
+        <button onClick={toggleTheme}>ChangeThemeColor</button>
+      </div>
       <ZustandProfile />
       <ZustandButton />
       <BarChart />
