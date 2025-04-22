@@ -18,7 +18,8 @@ import {
   Legend,
   Filler,
 } from "chart.js";
-import ZustandButton from "./components/zustandButton/ZustandButton";
+import ZustandButton from "./components/zustand/ZustandButton";
+import ZustandProfile from "./components/zustand/ZustandProfile";
 
 ChartJS.register(
   CategoryScale,
@@ -37,6 +38,7 @@ function App() {
   return (
     <div>
       <h1>Charts</h1>
+      <ZustandProfile />
       <ZustandButton />
       <BarChart />
       <LineChart />

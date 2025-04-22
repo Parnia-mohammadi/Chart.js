@@ -4,6 +4,9 @@ const useCounterStore = create((set) => ({
   count: 0,
   increase: () => set((state) => ({ count: state.count + 1 })),
   decrease: () => set((state) => ({ count: state.count - 1 })),
+  user: { name: "", email: "" },
+  setUser: (updatedUser) =>
+    set((state) => ({ user: { ...state.user, ...updatedUser } })),
 }));
 
 export default useCounterStore;
